@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_layout"
+    tools:context=".residuos.ResiduosActivity">
+    <!-- NavBar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background"
+        style="@style/HeaderBar"
+        app:title=" "
+        tools:layout_editor_absoluteX="73dp">
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="Residuos"
+            android:textColor="@color/white"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="70dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+        <ImageButton
+            android:id="@+id/organico"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_manzana"
+            android:elevation="10dp"
+            android:background="#E7EAE9"/>
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+        <ImageButton
+            android:id="@+id/plasticos"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_plastico"
+            android:elevation="10dp"
+            android:background="#E7EAE9"/>
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+        <ImageButton
+            android:id="@+id/carton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_caja"
+            android:elevation="10dp"
+            android:background="#E7EAE9"/>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+        <ImageButton
+            android:id="@+id/general"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_basura"
+            android:elevation="10dp"
+            android:background="#E7EAE9"/>
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
